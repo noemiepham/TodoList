@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+    <div class="box" id="heading">
+      <h1>
+        <%= kindOfDay %>
+      </h1>
+    </div>
+    <div class="box">
+      <% for (let i=0; i < newListItem.length; i++){ %>
+        <div class="item">
+          <input type="checkbox">
+          <p>
+            <%= newListItem[i] %>
+          </p>
+        </div>
+        <% } %>
+          <form action="/" method="post">
+            <input type="text" name="newItem" id="newItem" placeholder="New item" autocapitalize="">
+            <button type="submit" class="btn btn-primary" name="button">+</button>
+          </form>
+    </div>
+  <!-- Bootstrap JavaScript Libraries -->
+</body>
+
+</html>
