@@ -1,16 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <title>Todo List</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-</head>
-
-<body>
+<%- include('header'); -%>
     <div class="box" id="heading">
       <h1>
         <%= listTitle %>
@@ -24,13 +12,12 @@
             <%= newListItem[i] %>
           </p>
         </div>
+
         <% } %>
           <form action="/" method="post">
             <input type="text" name="newItem" id="newItem" placeholder="New item" autocapitalize="">
-            <button type="submit" class="btn btn-primary" name="button">+</button>
+            <button type="submit" class="btn btn-primary" name="list" value=<%=listTitle%>+</button>
           </form>
     </div>
   <!-- Bootstrap JavaScript Libraries -->
-</body>
-
-</html>
+  <%- include('footer'); -%>
