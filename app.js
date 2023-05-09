@@ -10,7 +10,7 @@ console.log(module);
 
 const app = express();
 
-let items = [];
+let items = ["Buy Food", "Cook Food", "Eat Food"];
 let workItems = [];
 app.set('view engine', 'ejs');
 
